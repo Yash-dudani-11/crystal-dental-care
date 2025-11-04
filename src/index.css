@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=DM+Sans:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .clip-path-wave {
+    clip-path: path(
+      "M0,100 Q50,200 100,100 T200,100 T400,100 T600,100 T800,100 T1000,100 L1000,0 L0,0 Z"
+    );
+  }
+  
