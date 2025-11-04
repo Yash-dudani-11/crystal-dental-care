@@ -1,15 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- ✅ Charset & Viewport -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+
+    <!-- ✅ Basic Fallback SEO (React Helmet overrides these at runtime) -->
+    <title>Crystal Dental Care | Best Dentist in Indore</title>
+    <meta
+      name="description"
+      content="Crystal Dental Care in Indore provides expert dental care — root canal, braces, implants, and whitening by Dr. Hansa. Visit for your perfect smile."
+    />
+    <link rel="canonical" href="https://crystaldentalcare.in/" />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- ✅ Font Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Calendly Embed (async load) -->
+    <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
+
+    <!-- ✅ PWA / App Manifest (optional but helps SEO & branding) -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ✅ Theme Color -->
+    <meta name="theme-color" content="#fff4e6" />
+
+    <!-- ✅ OG/Twitter placeholders (React Helmet will override dynamically) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Crystal Dental Care" />
+    <meta
+      property="og:description"
+      content="Modern dental clinic in Indore offering advanced treatments by Dr. Hansa."
+    />
+    <meta property="og:image" content="/clinic-image.webp" />
+    <meta property="og:url" content="https://crystaldentalcare.in/" />
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
