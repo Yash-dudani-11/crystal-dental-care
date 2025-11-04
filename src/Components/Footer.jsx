@@ -11,7 +11,7 @@ export const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-10 px-6">
+    <footer role="contentinfo" aria-label="Crystal Dental Care Footer" className="bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center lg:space-x-8">
         {/* Left Section - Clinic Info */}
         <div className="flex flex-col space-y-4 lg:w-1/3">

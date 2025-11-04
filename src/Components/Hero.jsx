@@ -231,26 +231,29 @@
 // export default HeroSection;
 
 
-
 import React from "react";
 import { motion } from "framer-motion";
 import { FaTooth, FaWhatsapp } from "react-icons/fa";
-import bgimage from "/dental_background.jpg";
+import bgimage from "/dental_background.jpg"; // ✅ use .webp
+
 const HeroSection = () => {
   return (
-    <section id='home' className="relative min-h-screen flex flex-col-reverse md:flex-row items-center justify-evenly pt-28 px-6 md:px-16 pb-24 md:pb-12">
-
+    <header
+      id="home"
+      className="relative min-h-screen flex flex-col-reverse md:flex-row items-center justify-evenly pt-28 px-6 md:px-16 pb-24 md:pb-12"
+    >
+      {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full">
         <img
           src={bgimage}
-          alt="Dental Clinic Background"
+          alt=""
+          aria-hidden="true"
           decoding="async"
           fetchpriority="high"
           className="w-full h-full md:object-cover opacity-80"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent"></div>
-
 
       {/* Left Content */}
       <motion.div
@@ -275,11 +278,11 @@ const HeroSection = () => {
           smile.
         </p>
 
-        {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
           {/* Explore Services */}
           <motion.a
             href="#services"
+            aria-label="Explore our dental services"
             whileHover={{
               scale: 1.05,
               boxShadow: "0px 4px 15px rgba(13,148,136,0.3)",
@@ -291,27 +294,12 @@ const HeroSection = () => {
             Explore Services
           </motion.a>
 
-          {/* Book Appointment - commented out as requested */}
-          {/*
-          <motion.a
-            href="#appointment"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 4px 15px rgba(13,148,136,0.2)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center justify-center gap-2 px-8 py-4 border-2 border-teal-600 text-teal-700 rounded-full text-lg font-medium hover:bg-teal-50 transition-all duration-300"
-          >
-            <FaCalendarAlt className="text-xl" />
-            Book Appointment
-          </motion.a>
-          */}
-
           {/* WhatsApp Button */}
           <motion.a
             href="https://wa.me/9406544202"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Book appointment via WhatsApp"
             whileHover={{
               scale: 1.05,
               boxShadow: "0px 4px 15px rgba(0,200,83,0.3)",
@@ -320,7 +308,7 @@ const HeroSection = () => {
             className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white rounded-full text-lg font-medium shadow-md hover:bg-green-600 transition-all duration-300"
           >
             <FaWhatsapp className="text-xl" />
-            Chat on WhatsApp
+            <span>Book via WhatsApp</span>
           </motion.a>
         </div>
       </motion.div>
@@ -342,17 +330,16 @@ const HeroSection = () => {
             alt="Clinic"
             width="420"
             height="420"
+            loading="lazy"
             decoding="async"
             className="w-[330px] md:w-[420px] h-[330px] md:h-[420px] rounded-full shadow-lg object-cover"
           />
-
         </motion.div>
       </motion.div>
-      {/* Inverted Wave Divider (Bottom of Hero) */}
+
+      {/* Bottom Divider */}
       <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-b from-transparent via-teal-50 to-teal-50 pointer-events-none"></div>
-
-
-    </section>
+    </header>
   );
 };
 

@@ -156,6 +156,8 @@
 
 // export default Navbar;
 // src/components/Navbar.jsx
+
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
@@ -230,6 +232,7 @@ const Navbar = () => {
         transition={{ delay: 2.3, duration: 1 }}
       >
         <nav
+          aria-label="Main navigation"
           className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[98%] md:w-[95%] lg:w-[90%] bg-white/60 backdrop-blur-md border border-teal-100 shadow-md rounded-2xl px-4 py-4 flex items-center justify-between transition-transform duration-500 z-[1000] ${isVisible ? "translate-y-0" : "-translate-y-full"
             } ${loading ? "hidden" : ""}`}
         >
@@ -240,10 +243,12 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-80}
+              aria-label="Go to Home"
             >
               <img
                 src="/logo.png"
                 alt="Logo"
+                loading="eager"
                 className="h-12 w-12 rounded-full border-2 border-teal-400 hover:scale-110 transition-transform duration-300 shadow-sm"
               />
             </Link>

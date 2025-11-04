@@ -13,7 +13,6 @@ const AboutUs = () => {
   const statsref = useRef(null);
   const statsInView = useInView(statsref, { once: true, threshold: 0.5 });
   const controls = useAnimation();
-
   const [counts, setCounts] = useState(stats.map(() => 0));
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const AboutUs = () => {
       stats.forEach((stat, i) => {
         let start = 0;
         const end = stat.value;
-        const duration = 2000; // 2 seconds
+        const duration = 2000;
         const stepTime = 10;
         const increment = end / (duration / stepTime);
 
@@ -41,28 +40,23 @@ const AboutUs = () => {
     }
   }, [statsInView]);
 
-
   return (
-    <div className="relative">
+    <article className="relative" id="about">
       {/* Top Wave Divider */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
-        <svg viewBox="0 0 1440 320">
+      <div
+        className="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 1440 320" role="presentation" focusable="false">
           <path fill="#fffaf6" fillOpacity="1" d="M0,160L1440,320L1440,0L0,0Z"></path>
         </svg>
       </div>
-      <section
-        id="about"
-        className="relative flex flex-col items-center justify-center text-center min-h-screen overflow-hidden px-8 pt-20 pb-8 bg-gradient-to-b from-teal-50  via-teal-100 to-teal-100"
-      >
-        {/* Floating Aura Animation */}
-        {/* <motion.div
-        className="absolute w-[600px] h-[600px] bg-teal-100 rounded-full blur-3xl opacity-40"
-        animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.8, 0.4] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      ></motion.div> */}
 
+      <section
+        className="relative flex flex-col items-center justify-center text-center min-h-screen overflow-hidden px-8 pt-20 pb-8 bg-gradient-to-b from-teal-50 via-teal-100 to-teal-100"
+      >
         {/* Doctor Image with Glow Ring */}
-        <motion.div
+        <motion.figure
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -73,25 +67,28 @@ const AboutUs = () => {
             className="absolute inset-0 rounded-full border-4 border-teal-400/50"
             animate={{ rotate: 360 }}
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          ></motion.div>
-
+            aria-hidden="true"
+          />
           <img
             src={drImage}
-            alt="Dr. Hansa Dudani"
+            alt="Portrait of Dr. Hansa Dudani - Dental Specialist"
             loading="lazy"
+            width="300"
+            height="300"
+            decoding="async"
             className="w-[220px] h-[220px] md:w-[300px] md:h-[300px] rounded-full object-cover shadow-[0_0_40px_-10px_rgba(13,148,136,0.4)]"
           />
-        </motion.div>
+        </motion.figure>
 
         {/* Heading */}
-        <motion.h2
+        <motion.h1
           className="text-4xl md:text-5xl font-bold text-teal-700 mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           About Dr. Hansa Dudani
-        </motion.h2>
+        </motion.h1>
 
         {/* Description */}
         <motion.p
@@ -120,29 +117,32 @@ const AboutUs = () => {
           )}
         </AnimatePresence>
 
-        {/* Button */}
+        {/* CTA Button */}
         <motion.button
           onClick={() => setShowMore(!showMore)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold shadow-md transition-all duration-300"
+          className="mt-6 px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
+          aria-expanded={showMore}
+          aria-controls="more-about"
         >
           {showMore ? "Show Less" : "Learn More"}
         </motion.button>
-
       </section>
+
+      {/* Stats Section */}
       <section
         ref={statsref}
         className="relative pb-10 md:pb-10 bg-teal-100 overflow-hidden"
+        aria-label="Professional Achievements"
       >
-        {/* Animated background glow */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-teal-200 via-white to-teal-200 opacity-40 blur-3xl"
           animate={{ x: ["-20%", "20%", "-20%"] }}
           transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+          aria-hidden="true"
         />
 
-        {/* Frosted glass container */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10">
           <div className="backdrop-blur-xl bg-white/40 rounded-3xl shadow-2xl py-10 md:py-14 flex flex-col sm:flex-row justify-around items-center gap-10 sm:gap-0 text-center border border-white/50">
             {stats.map((stat, i) => (
@@ -171,8 +171,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
-    </div>
+    </article>
   );
 };
 
