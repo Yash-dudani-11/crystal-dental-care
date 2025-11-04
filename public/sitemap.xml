@@ -1,48 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://crystaldentalcare.in/</loc>
     <lastmod>2025-11-01</lastmod>
     <priority>1.00</priority>
   </url>
-
-  <!-- About Us -->
   <url>
     <loc>https://crystaldentalcare.in/#about</loc>
     <lastmod>2025-11-01</lastmod>
     <priority>0.90</priority>
   </url>
-
-  <!-- Services -->
   <url>
     <loc>https://crystaldentalcare.in/#services</loc>
     <lastmod>2025-11-01</lastmod>
     <priority>0.90</priority>
   </url>
-
-  <!-- Testimonials -->
   <url>
     <loc>https://crystaldentalcare.in/#testimonials</loc>
     <lastmod>2025-11-01</lastmod>
     <priority>0.80</priority>
   </url>
-
-  <!-- FAQ -->
   <url>
     <loc>https://crystaldentalcare.in/#faq</loc>
     <lastmod>2025-11-01</lastmod>
     <priority>0.70</priority>
   </url>
-
-  <!-- Contact / Map -->
   <url>
     <loc>https://crystaldentalcare.in/#contact</loc>
     <lastmod>2025-11-01</lastmod>
     <priority>0.70</priority>
   </url>
-
 </urlset>
