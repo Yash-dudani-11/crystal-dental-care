@@ -268,7 +268,7 @@ const HeroSection = () => {
 
         <h1 className="font-poppins font-extrabold text-4xl md:text-6xl text-teal-700 leading-[1.1]">
           Crystal
-          <br className="md:block hidden" />
+          <br />
           Dental Care
         </h1>
 
