@@ -241,7 +241,13 @@ const ServicesSection = () => {
         {displayedServices.map((service, index) => (
           <motion.article
             key={service.id}
-            variants={cardVariants}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: (index % 3) * 0.20, // 👈 stagger effect for each batch of 3
+            }}
             whileHover={{ scale: 1.05 }}
             className="relative rounded-3xl overflow-hidden shadow-xl group cursor-pointer bg-white"
           >
@@ -275,6 +281,7 @@ const ServicesSection = () => {
             </motion.div>
           </motion.article>
         ))}
+
       </motion.div>
 
       {/* Load More Button */}

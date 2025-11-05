@@ -259,7 +259,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1,delay:2 }}
         className="text-gray-700 max-w-xl z-10 space-y-4 md:space-y-6"
       >
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mt-2">
@@ -296,7 +296,7 @@ const HeroSection = () => {
 
           {/* WhatsApp Button */}
           <motion.a
-            href="https://wa.me/9406544202"
+            href="https://wa.me/919406544202"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Book appointment via WhatsApp"
@@ -317,7 +317,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2 }}
+        transition={{ duration: 1.2, delay:2 }}
         className="relative flex justify-center items-center"
       >
         <motion.div
