@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="relative py-28 bg-gradient-to-b from-teal-100 via-teal-100/40 to-teal-100 overflow-hidden"
+      className="relative py-16 bg-gradient-to-b from-teal-100 via-teal-100/40 to-teal-100 overflow-hidden"
     >
       {/* Soft background accents */}
       <div className="absolute top-1/3 left-0 w-64 h-64 bg-teal-100/30 blur-[100px] rounded-full" />
@@ -136,13 +136,31 @@ export default function TestimonialsSection() {
               key={i}
               onClick={() => setIndex(i)}
               whileHover={{ scale: 1.2 }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                i === index ? "bg-teal-600 w-6" : "bg-teal-200"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${i === index ? "bg-teal-600 w-6" : "bg-teal-200"
+                }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <a
+            href="https://g.page/r/CUxaye5t1es6EBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            💬 Leave a Review on Google
+          </a>
+          <p className="text-gray-600 mt-3 text-sm italic">
+            Your feedback helps us serve you better!
+          </p>
+        </motion.div>
       </div>
     </motion.section>
   );
