@@ -47,7 +47,7 @@ const MapComponent = () => {
                 name: "Dr. Hansa's Crystal Dental Care",
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "12-A Scheme No. 54, Vijay Nagar",
+                  streetAddress: "Shop 203, 1st Floor, Vikram Tower, Sapna Sangeeta Rd, Navlakha.",
                   addressLocality: "Indore",
                   addressRegion: "Madhya Pradesh",
                   addressCountry: "India",

@@ -14,14 +14,14 @@ const App = () => {
   return (
     <div>
       <Helmet>
-        <title>Crystal Dental Care | Best Dentist in Indore | Dentist near me </title>
+        <title>Dr. Hansa's Crystal Dental Care | Best Dentist in Indore | Crystal Dental Care </title>
         <meta
           name="description"
           content="Crystal Dental Care in Indore offers expert dental treatments including root canals, implants, braces, and teeth whitening. Led by Dr. Hansa, ensuring your perfect crystal smile."
         />
         <meta
           name="keywords"
-          content="dental clinic Indore, dentist in Indore, root canal Indore, teeth cleaning, braces Indore, Dr. Hansa, crystal dental care, teeth whitening, dental implants"
+          content="dental clinic Indore, dentist in Indore, root canal Indore, teeth cleaning, braces Indore, Dr. Hansa's crystal dental care, teeth whitening, dental implants"
         />
         <meta name="author" content="Crystal Dental Care" />
 
@@ -29,7 +29,7 @@ const App = () => {
         <meta property="og:title" content="Crystal Dental Care - Best Dentist in Indore" />
         <meta
           property="og:description"
-          content="Modern, compassionate dentistry by Dr. Hansa. Book your appointment today at Crystal Dental Care, Indore."
+          content="Modern, compassionate dentistry by Dr. Hansa. Book your appointment today at Dr Hansa's Crystal Dental Care, Indore."
         />
         <meta property="og:image" content="/clinic-image.webp" />
         <meta property="og:type" content="website" />
