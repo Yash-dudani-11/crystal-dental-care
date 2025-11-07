@@ -21,7 +21,7 @@ const MapComponent = () => {
           <p className="text-gray-700 mb-6 text-lg">
             <strong>Dr. Hansa&apos;s Crystal Dental Care</strong>
             <br />
-            12-A Scheme No. 54, Vijay Nagar, Indore, Madhya Pradesh
+            Shop 203, 1st Floor, Vikram Tower, Sapna Sangeeta Rd, Navlakha., Indore, Madhya Pradesh
           </p>
 
           {/* Google Map Embed */}
