@@ -79,7 +79,7 @@ const App = () => {
                   "Friday",
                   "Saturday",
                 ],
-                "opens": "10:00",
+                "opens": "12:30",
                 "closes": "20:00",
               },
             ],
